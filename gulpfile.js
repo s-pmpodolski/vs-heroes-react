@@ -12,11 +12,16 @@ var $ = require('gulp-load-plugins')();
 var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream'),
-    
-    sourceFile = './app/scripts/app.coffee',
-    
+    sourceFile = './app/scripts/app.jsx',
     destFolder = './dist/scripts',
     destFileName = 'app.js';
+
+
+gulp.task('default', function () {
+    return gulp.src(sourceFile)
+        .pipe(react())
+        .pipe(gulp.dest(destFolder));
+});
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
