@@ -2,8 +2,10 @@
 
 var React = window.React = require('react'),
     mui = require('material-ui'),
-    RaisedButton = mui.RaisedButton,
-    injectTapEventPlugin = require("react-tap-event-plugin");;
+    injectTapEventPlugin = require("react-tap-event-plugin"),
+    Column = require('./column/column.jsx'),
+    VsButton = require('./vs-button/vs-button.jsx'),
+    Hero = require('./hero/hero.jsx');
 
 //Needed for onTouchTap
 //Can go away when react 1.0 release
@@ -13,29 +15,30 @@ var React = window.React = require('react'),
 injectTapEventPlugin();
 
 
-var App = React.createClass({
+var HeroesComparator = React.createClass({
     render: function() {
-        var elapsed = Math.round(this.props.elapsed  / 100);
-        var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-        var message =
-            'React has been successfully running for ' + seconds + ' seconds. Awesome!';
-
         return (
-            <p>
-                {message}
-                <RaisedButton label="Default" />
-            </p>
+            <div className="app-container">
+                <Column>
+                    <Hero />
+                </Column>
+                <Column>
+                    <VsButton />
+                </Column>
+                <Column>
+                    <Hero />
+                </Column>
+            </div>
         );
     }
 });
 
 // Call React.createFactory instead of directly call ExampleApplication({...}) in React.render
-var AppFactory = React.createFactory(App);
+var AppFactory = React.createFactory(HeroesComparator);
 
-var start = new Date().getTime();
-setInterval(function() {
-    React.render(
-        AppFactory({elapsed: new Date().getTime() - start}),
-        document.getElementById('app')
-    );
-}, 50);
+var container = document.getElementById('app');
+
+React.render(
+    AppFactory(),
+    container
+);

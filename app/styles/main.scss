@@ -4,3 +4,21 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/";
 
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 
+#app {
+    @extend .container-fluid;
+}
+
+.app-container {
+    @extend .row;
+}
+
+.hero-vs-button {
+    text-align: center;
+}
+
+.hero-image {
+    @extend .img-circle;
+    max-width: 100%;
+
+    width: 50%;
+}

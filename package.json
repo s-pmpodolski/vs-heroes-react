@@ -5,7 +5,8 @@
     "install": "^0.1.8",
     "material-ui": "^0.7.1",
     "material-ui-sass": "^0.7.1",
-    "npm": "^2.7.1"
+    "npm": "^2.7.1",
+    "react-bootstrap": "^0.17.0"
   },
   "devDependencies": {
     "browser-sync": "latest",
