@@ -2,11 +2,23 @@
   "name": "vs-heroes",
   "version": "0.0.0",
   "dependencies": {
+    "director": "^1.2.8",
+    "events": "^1.0.2",
+    "flux": "^2.0.1",
+    "fluxxor": "^1.5.2",
+    "graceful-fs": "^3.0.6",
     "install": "^0.1.8",
+    "keymirror": "^0.1.1",
     "material-ui": "^0.7.1",
     "material-ui-sass": "^0.7.1",
+    "materialize-css": "^0.95.3",
     "npm": "^2.7.1",
-    "react-bootstrap": "^0.17.0"
+    "object-assign": "^2.0.0",
+    "react-bootstrap": "^0.17.0",
+    "resourceful": "^0.3.5",
+    "restful": "^0.4.5",
+    "restful.js": "^0.5.2",
+    "underscore": "^1.8.2"
   },
   "devDependencies": {
     "browser-sync": "latest",

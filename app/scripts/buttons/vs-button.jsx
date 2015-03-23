@@ -8,8 +8,8 @@ var React = require('react'),
 var VsButton = React.createClass({
     render: function() {
         return (
-            <FloatingActionButton className="hero-vs-button">
-                VS
+            <FloatingActionButton className="hero-vs-button" onClick={this.props.onClick}>
+                FIGHT!
             </FloatingActionButton>
         );
     }

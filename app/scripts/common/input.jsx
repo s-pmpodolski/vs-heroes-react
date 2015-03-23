@@ -7,7 +7,7 @@ var React = require('react'),
 var Input = React.createClass({
     render: function() {
         return (
-            <TextField {...this.props} />
+            <TextField {...this.props} ref="TextField"/>
         );
     }
 });
