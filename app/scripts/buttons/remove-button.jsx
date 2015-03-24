@@ -8,7 +8,7 @@ var React = require('react'),
 var RemoveButton = React.createClass({
     render: function() {
         return (
-            <RaisedButton label="Remove --" primary={true} onClick={this.props.onClick} />
+            <RaisedButton label="Remove" primary={true} onClick={this.props.onClick} />
         );
     }
 });

@@ -26,6 +26,7 @@ body {
 
 .app-container {
     @extend .row;
+    margin-top: 40px;
 }
 
 .column {
@@ -34,26 +35,54 @@ body {
     }
 }
 
+.hero-vs-button-wrapper {
+    .mui-paper {
+        height: 90px;
+    }
+}
+
+.hero-buttons-nav {
+    width: 100%;
+    position: relative;
+    top: -20px;
+
+    .mui-raised-button:last-child {
+        margin-left: 5px;
+    }
+}
+
 .hero-vs-button {
     text-align: center;
+    font-family: 'Bangers', cursive;
+    @extend .mui-font-style-display-1;
+    font-size: 125px;
+    color: $red-500;
+    text-shadow: 2px 2px 8px rgba(150, 150, 150, 1);
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+
+.hero-vs-button:hover {
+    color: $red-900;
+    cursor: pointer;
 }
 
 .hero-image {
     @extend .img-circle;
     max-width: 50%;
-
 }
 
 .hero-top-bar {
     background-color: $blue-500;
     height: 64px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     h1 {
         color: $blue-50;
         margin-top: 0;
         margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
         height: 100%;
         width: 100%;
         text-overflow: ellipsis;
@@ -61,6 +90,8 @@ body {
 
     .mui-text-field {
         width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     input.mui-text-field-input {
@@ -113,7 +144,7 @@ body {
             margin-right: 10px;
         }
 
-        h3 {
+        h5 {
             display: inline-block;
             width: 100%;
             max-width: 100%;
@@ -121,6 +152,7 @@ body {
             text-overflow: ellipsis;
             margin: 0;
             line-height: 84px;
+            color: $grey-500;
         }
     }
 }

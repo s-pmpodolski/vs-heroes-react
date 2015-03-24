@@ -66,7 +66,7 @@ var HeroEntry = React.createClass({
             <FlatButton onClick={this.onClick}>
                 {image}
                 <div className="hero-entry-text">
-                    <h3>{this.props.name}</h3>
+                    <h5>{this.props.name}</h5>
                 </div>
             </FlatButton>
         );

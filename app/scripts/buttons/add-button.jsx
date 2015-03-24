@@ -8,7 +8,7 @@ var React = require('react'),
 var AddButton = React.createClass({
     render: function() {
         return (
-            <RaisedButton label="Add ++" secondary={true} onClick={this.props.onClick}/>
+            <RaisedButton label="Add" secondary={true} onClick={this.props.onClick} />
         );
     }
 });

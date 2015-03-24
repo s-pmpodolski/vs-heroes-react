@@ -75,8 +75,10 @@ var HeroesComparator = React.createClass({
             buttons = (
                 <span>
                     <VsButton onClick={this.fight} />
-                    <AddButton onClick={this.addPair}/>
-                    <RemoveButton onClick={this.removePair}/>
+                    <div className="hero-buttons-nav">
+                        <AddButton onClick={this.addPair}/>
+                        <RemoveButton onClick={this.removePair}/>
+                    </div>
                 </span>
             );
         }
